@@ -4,6 +4,7 @@ import sys
 import random
 from tkinter import filedialog
 from tkinter import *
+from Background import *
 
 pygame.init()
 
@@ -35,3 +36,11 @@ while True:
         # Event handling for a range of different key presses    
         if event.type == pygame.KEYDOWN:
               pass
+
+    # Render Functions -----
+    bg = Background()
+    bg.backgournd.render()
+    bg.ground.render()
+
+    pygame.display.update()
+    FPS_CLOCK.tick(FPS)
